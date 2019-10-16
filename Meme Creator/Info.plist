@@ -62,5 +62,7 @@
 	</array>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We would like to access photo album for your profile image</string>
 </dict>
 </plist>
