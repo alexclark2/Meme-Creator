@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,9 +37,14 @@
 		D0EF3D7B2356509B0085FFA4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D7A2356509B0085FFA4 /* Extensions.swift */; };
 		D0EF3D7D235650C20085FFA4 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D7C235650C20085FFA4 /* CustomImageView.swift */; };
 		D0EF3D7F235650E90085FFA4 /* FirebaseUtilis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D7E235650E90085FFA4 /* FirebaseUtilis.swift */; };
+		D0EF3D812356600C0085FFA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0EF3D802356600C0085FFA4 /* GoogleService-Info.plist */; };
+		D0EF3D8323566B160085FFA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D8223566B150085FFA4 /* SceneDelegate.swift */; };
+		FB61DBBC8E811007204904EF /* Pods_Meme_Creator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DA9D2BAA9A43F047FCCE8 /* Pods_Meme_Creator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EF2F0DE217D9C506152EA7E /* Pods-Meme Creator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meme Creator.debug.xcconfig"; path = "Target Support Files/Pods-Meme Creator/Pods-Meme Creator.debug.xcconfig"; sourceTree = "<group>"; };
+		A63B7D6DF60E8EB47D8B6C14 /* Pods-Meme Creator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meme Creator.release.xcconfig"; path = "Target Support Files/Pods-Meme Creator/Pods-Meme Creator.release.xcconfig"; sourceTree = "<group>"; };
 		D0EF3D2D23564A6E0085FFA4 /* Meme Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EF3D3023564A6E0085FFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0EF3D3723564A6E0085FFA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +77,9 @@
 		D0EF3D7A2356509B0085FFA4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0EF3D7C235650C20085FFA4 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		D0EF3D7E235650E90085FFA4 /* FirebaseUtilis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtilis.swift; sourceTree = "<group>"; };
+		D0EF3D802356600C0085FFA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D0EF3D8223566B150085FFA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D45DA9D2BAA9A43F047FCCE8 /* Pods_Meme_Creator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meme_Creator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +87,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB61DBBC8E811007204904EF /* Pods_Meme_Creator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08EC231D8E2D01385B8DF377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D45DA9D2BAA9A43F047FCCE8 /* Pods_Meme_Creator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDC8A415672283B0E696FBC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EF2F0DE217D9C506152EA7E /* Pods-Meme Creator.debug.xcconfig */,
+				A63B7D6DF60E8EB47D8B6C14 /* Pods-Meme Creator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D0EF3D2423564A6E0085FFA4 = {
 			isa = PBXGroup;
 			children = (
 				D0EF3D2F23564A6E0085FFA4 /* Meme Creator */,
 				D0EF3D2E23564A6E0085FFA4 /* Products */,
+				CDC8A415672283B0E696FBC3 /* Pods */,
+				08EC231D8E2D01385B8DF377 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D0EF3D3023564A6E0085FFA4 /* AppDelegate.swift */,
+				D0EF3D8223566B150085FFA4 /* SceneDelegate.swift */,
 				D0EF3D5523564D390085FFA4 /* MainTabBarController.swift */,
 				D0EF3D5423564CCD0085FFA4 /* Home */,
 				D0EF3D4B23564C280085FFA4 /* Search */,
@@ -118,6 +147,7 @@
 				D0EF3D3923564A720085FFA4 /* Assets.xcassets */,
 				D0EF3D3B23564A720085FFA4 /* LaunchScreen.storyboard */,
 				D0EF3D3E23564A720085FFA4 /* Info.plist */,
+				D0EF3D802356600C0085FFA4 /* GoogleService-Info.plist */,
 			);
 			path = "Meme Creator";
 			sourceTree = "<group>";
@@ -210,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0EF3D4123564A720085FFA4 /* Build configuration list for PBXNativeTarget "Meme Creator" */;
 			buildPhases = (
+				822FEC015BA1E555C1DBFC4F /* [CP] Check Pods Manifest.lock */,
 				D0EF3D2923564A6E0085FFA4 /* Sources */,
 				D0EF3D2A23564A6E0085FFA4 /* Frameworks */,
 				D0EF3D2B23564A6E0085FFA4 /* Resources */,
+				FC3087B018B78A34B513B709 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,11 +295,54 @@
 			files = (
 				D0EF3D3D23564A720085FFA4 /* LaunchScreen.storyboard in Resources */,
 				D0EF3D3A23564A720085FFA4 /* Assets.xcassets in Resources */,
+				D0EF3D812356600C0085FFA4 /* GoogleService-Info.plist in Resources */,
 				D0EF3D3823564A6E0085FFA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		822FEC015BA1E555C1DBFC4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meme Creator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3087B018B78A34B513B709 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meme Creator/Pods-Meme Creator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meme Creator/Pods-Meme Creator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meme Creator/Pods-Meme Creator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0EF3D2923564A6E0085FFA4 /* Sources */ = {
@@ -289,6 +364,7 @@
 				D0EF3D6823564ED50085FFA4 /* PhotoSelectorCell.swift in Sources */,
 				D0EF3D5823564D9E0085FFA4 /* HomePostCell.swift in Sources */,
 				D0EF3D5123564C930085FFA4 /* UserSearchCell.swift in Sources */,
+				D0EF3D8323566B160085FFA4 /* SceneDelegate.swift in Sources */,
 				D0EF3D5323564CC30085FFA4 /* HomeController.swift in Sources */,
 				D0EF3D7F235650E90085FFA4 /* FirebaseUtilis.swift in Sources */,
 				D0EF3D6A23564F020085FFA4 /* PhotoSelectorHeader.swift in Sources */,
@@ -442,6 +518,7 @@
 		};
 		D0EF3D4223564A720085FFA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EF2F0DE217D9C506152EA7E /* Pods-Meme Creator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +537,7 @@
 		};
 		D0EF3D4323564A720085FFA4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63B7D6DF60E8EB47D8B6C14 /* Pods-Meme Creator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

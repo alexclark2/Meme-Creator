@@ -22,5 +22,6 @@ target 'Meme Creator' do
   pod 'SwiftyJSON'
   pod 'TinyConstraints'
   pod 'KeyboardLayoutGuide'
+  pod 'Firebase/Messaging'
 
 end

@@ -6,24 +6,31 @@
 //  Copyright © 2019 Alexander. All rights reserved.
 //
 
+
 import UIKit
-import UserNotifications
+import FirebaseMessaging
 import Firebase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
 
+    var window: UIWindow?
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         FirebaseApp.configure()
-            
+        
         window = UIWindow()
         window?.rootViewController = MainTabBarController()
-               
+        
         attemptRegisterForNotifications(application: application)
+        
+        // Override point for customization after application launch.
         return true
     }
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("Registered for notifications:", deviceToken)
     }
@@ -31,15 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("Registered with FCM with token:", fcmToken)
     }
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-        func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    
+    // listen for user notifications
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler(.alert)
     }
     
@@ -97,7 +98,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         
         application.registerForRemoteNotifications()
     }
-
 
 }
 

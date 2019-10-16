@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseMessaging
 
 class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -101,6 +102,12 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
         
         return button
     }()
+    let customKeyWindow = UIApplication.shared.connectedScenes
+    .filter({$0.activationState == .foregroundActive})
+    .map({$0 as? UIWindowScene})
+    .compactMap({$0})
+    .first?.windows
+    .filter({$0.isKeyWindow}).first
     
     @objc func handleSignUp() {
         guard let email = emailTextField.text, !email.isEmpty else { return }
@@ -149,10 +156,15 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                             print("Failed to save user info into db:", err)
                             return
                         }
+                        let customKeyWindow = UIApplication.shared.connectedScenes
+                        .filter({$0.activationState == .foregroundActive})
+                        .map({$0 as? UIWindowScene})
+                        .compactMap({$0})
+                        .first?.windows
+                        .filter({$0.isKeyWindow}).first
                         
                         print("Successfully saved user info to db")
-                        
-                        guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+                        guard let mainTabBarController = customKeyWindow?.rootViewController as? MainTabBarController else { return }
                         
                         mainTabBarController.setupViewControllers()
                         
