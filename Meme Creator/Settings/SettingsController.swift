@@ -45,7 +45,7 @@ class SettingsController: UIViewController {
     func configureUI() {
         configureTableView()
         navigationController?.navigationBar.isTranslucent = true
-        self.hideIndicator()
+        self.hideIndicator() 
     }
     
 }

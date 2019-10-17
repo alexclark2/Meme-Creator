@@ -108,13 +108,8 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
                     header.photoImageView.image = image
                     
                 })
-
             }
         }
-        
-        
-        
-        
         return header
     }
     

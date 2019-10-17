@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Foundation
+import MBProgressHUD
+
 
 extension UIColor {
     
@@ -86,5 +89,17 @@ extension Date {
         
         return "\(quotient) \(unit)\(quotient == 1 ? "" : "s") ago"
         
+    }
+}
+extension UIViewController {
+    func showIndicator(withTitle title: String, and Description:String) {
+        let Indicator = MBProgressHUD.showAdded(to: self.view, animated: true)
+        Indicator.label.text = title
+        Indicator.isUserInteractionEnabled = false
+        Indicator.detailsLabel.text = Description
+        Indicator.show(animated: true)
+    }
+    func hideIndicator() {
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
 }
