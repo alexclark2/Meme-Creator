@@ -39,6 +39,11 @@
 		D0EF3D7F235650E90085FFA4 /* FirebaseUtilis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D7E235650E90085FFA4 /* FirebaseUtilis.swift */; };
 		D0EF3D812356600C0085FFA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0EF3D802356600C0085FFA4 /* GoogleService-Info.plist */; };
 		D0EF3D8323566B160085FFA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D8223566B150085FFA4 /* SceneDelegate.swift */; };
+		D0EF3D852358A4D50085FFA4 /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D842358A4D40085FFA4 /* UserInfoHeader.swift */; };
+		D0EF3D882358A5270085FFA4 /* PasswordChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D872358A5270085FFA4 /* PasswordChange.swift */; };
+		D0EF3D8A2358A53D0085FFA4 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D892358A53D0085FFA4 /* SettingsCell.swift */; };
+		D0EF3D8C2358A5530085FFA4 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D8B2358A5530085FFA4 /* SettingsSection.swift */; };
+		D0EF3D8E2358A56F0085FFA4 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EF3D8D2358A56F0085FFA4 /* SettingsController.swift */; };
 		FB61DBBC8E811007204904EF /* Pods_Meme_Creator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45DA9D2BAA9A43F047FCCE8 /* Pods_Meme_Creator.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +84,11 @@
 		D0EF3D7E235650E90085FFA4 /* FirebaseUtilis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtilis.swift; sourceTree = "<group>"; };
 		D0EF3D802356600C0085FFA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0EF3D8223566B150085FFA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D0EF3D842358A4D40085FFA4 /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
+		D0EF3D872358A5270085FFA4 /* PasswordChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChange.swift; sourceTree = "<group>"; };
+		D0EF3D892358A53D0085FFA4 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		D0EF3D8B2358A5530085FFA4 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		D0EF3D8D2358A56F0085FFA4 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		D45DA9D2BAA9A43F047FCCE8 /* Pods_Meme_Creator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meme_Creator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,7 +151,8 @@
 				D0EF3D5D23564DFC0085FFA4 /* Model */,
 				D0EF3D6423564EA60085FFA4 /* Photo */,
 				D0EF3D6D23564F460085FFA4 /* Authentication */,
-				D0EF3D7223564FDF0085FFA4 /* User */,
+				D0EF3D7223564FDF0085FFA4 /* Profile */,
+				D0EF3D862358A4EC0085FFA4 /* Settings */,
 				D0EF3D792356508B0085FFA4 /* Utilis */,
 				D0EF3D3623564A6E0085FFA4 /* Main.storyboard */,
 				D0EF3D3923564A720085FFA4 /* Assets.xcassets */,
@@ -213,14 +224,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		D0EF3D7223564FDF0085FFA4 /* User */ = {
+		D0EF3D7223564FDF0085FFA4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				D0EF3D7323564FFC0085FFA4 /* UserProfileController.swift */,
 				D0EF3D75235650160085FFA4 /* UserProfileHeader.swift */,
 				D0EF3D772356506C0085FFA4 /* UserProfileCell.swift */,
 			);
-			path = User;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		D0EF3D792356508B0085FFA4 /* Utilis */ = {
@@ -231,6 +242,18 @@
 				D0EF3D7E235650E90085FFA4 /* FirebaseUtilis.swift */,
 			);
 			path = Utilis;
+			sourceTree = "<group>";
+		};
+		D0EF3D862358A4EC0085FFA4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D0EF3D842358A4D40085FFA4 /* UserInfoHeader.swift */,
+				D0EF3D872358A5270085FFA4 /* PasswordChange.swift */,
+				D0EF3D892358A53D0085FFA4 /* SettingsCell.swift */,
+				D0EF3D8B2358A5530085FFA4 /* SettingsSection.swift */,
+				D0EF3D8D2358A56F0085FFA4 /* SettingsController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,10 +373,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EF3D4F23564C790085FFA4 /* UserSearchController.swift in Sources */,
+				D0EF3D8E2358A56F0085FFA4 /* SettingsController.swift in Sources */,
 				D0EF3D5A23564DB60085FFA4 /* CommentsController.swift in Sources */,
 				D0EF3D7123564FC50085FFA4 /* SignUpController.swift in Sources */,
 				D0EF3D4823564B4E0085FFA4 /* PreviewPhotoContainerView.swift in Sources */,
 				D0EF3D6C23564F230085FFA4 /* SharePhotoController.swift in Sources */,
+				D0EF3D852358A4D50085FFA4 /* UserInfoHeader.swift in Sources */,
 				D0EF3D5623564D390085FFA4 /* MainTabBarController.swift in Sources */,
 				D0EF3D5F23564E0C0085FFA4 /* Post.swift in Sources */,
 				D0EF3D4623564B140085FFA4 /* CameraController.swift in Sources */,
@@ -370,10 +395,13 @@
 				D0EF3D6A23564F020085FFA4 /* PhotoSelectorHeader.swift in Sources */,
 				D0EF3D782356506C0085FFA4 /* UserProfileCell.swift in Sources */,
 				D0EF3D7423564FFC0085FFA4 /* UserProfileController.swift in Sources */,
+				D0EF3D8C2358A5530085FFA4 /* SettingsSection.swift in Sources */,
 				D0EF3D6323564E370085FFA4 /* Comment.swift in Sources */,
 				D0EF3D4D23564C540085FFA4 /* CustomAnimationDismisser.swift in Sources */,
+				D0EF3D8A2358A53D0085FFA4 /* SettingsCell.swift in Sources */,
 				D0EF3D7B2356509B0085FFA4 /* Extensions.swift in Sources */,
 				D0EF3D4A23564B830085FFA4 /* CustomAnimationPresenter.swift in Sources */,
+				D0EF3D882358A5270085FFA4 /* PasswordChange.swift in Sources */,
 				D0EF3D3123564A6E0085FFA4 /* AppDelegate.swift in Sources */,
 				D0EF3D76235650160085FFA4 /* UserProfileHeader.swift in Sources */,
 				D0EF3D5C23564DE20085FFA4 /* CommentCell.swift in Sources */,
