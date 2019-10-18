@@ -37,6 +37,7 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         collectionView?.register(HomePostCell.self, forCellWithReuseIdentifier: homePostCellId)
         
         setupLogOutButton()
+        setupSettingsButton()
         
         fetchUser()
         //fetchOrderedPosts()
@@ -126,8 +127,17 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     }
     
     fileprivate func setupLogOutButton() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleLogOut))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "logout").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleLogOut))
     }
+    fileprivate func setupSettingsButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettings))
+    }
+    @objc func handleSettings() {
+        let settingsController = SettingsController()
+        navigationController?.pushViewController(settingsController, animated: true)
+        
+    }
+    
     
     @objc func handleLogOut() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
